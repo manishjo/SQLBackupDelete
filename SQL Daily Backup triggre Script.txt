@@ -1,0 +1,5 @@
+Declare @Backup NVARCHAR(MAX)
+Set @Backup = N'<Backup storage path>'+
+''+REPLACE(@@SERVERNAME,'\','_')+'_<DB Name>_' + REPLACE(CONVERT(VARCHAR(12),GETDATE(),110),'-','_') + '_' + REPLACE(CONVERT(VARCHAR(12),GETDATE(),114),':','_') + '.BAK'
+BACKUP DATABASE [<DB Name>] TO DISK = @Backup
+WITH COMPRESSION, COPY_ONLY, STATS = 1

@@ -1,0 +1,1 @@
+Powershell.exe -executionpolicy remotesigned -File M:\Scripts\delete_old_backup.ps1
