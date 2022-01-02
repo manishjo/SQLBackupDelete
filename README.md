@@ -1,2 +1,3 @@
 # SQLBackupDelete
-Script to trigger SQL Backup move to Azure blob storage and then delete the one day old backup 
+We had a requirment to manually triggre backup for SQL DB and then upload that backup to Azure Blob storage using Azcopy
+And ones backup is uploaded to Azure blob storage delete a one day old backup from OS level so space can be created for next backup
